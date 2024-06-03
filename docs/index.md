@@ -1,30 +1,30 @@
-# Contact-Implicit Model Predictive Control for Dexterous In-hand Manipulation: A Long-Horizon and Robust Approach
+# Contact-Aware Non-prehensile Robotic Manipulation for Object Retrieval in Cluttered Environments
 
-The paper is submitted to [IROS2024](https://iros2024-abudhabi.org/).
+The paper is accepted by [IROS2023](https://ieee-iros.org/).
 
-The source code will be released after the publication of the paper.
+The source code will be released after the journal version of this paper.
 
 <!-- [[arXiv](https://arxiv.org/abs/2310.09899)] -->
 
-You can access the pre-print version on [arXiv](https://arxiv.org/abs/2402.18897)!
+You can access the pre-print version on [arXiv](https://arxiv.org/abs/2303.03635)!
 
 ## Video
 
 <p align="center">
-<iframe width="800" height="450" src="./video_short.mp4" title="24_inhand_manipulation_iros" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+<iframe width="800" height="450" src="./video_short.mp4" title="23_nonprehensile_push_iros" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
 </p>
 
 ## Abstract
 
-Dexterous in-hand manipulation is an essential skill of production and life. Nevertheless, the highly stiff and mutable features of contacts cause limitations to real-time contact discovery and inference, which degrades the performance of model-based methods.
+Non-prehensile manipulation methods usually use a simple end effector, e.g., a single rod, to manipulate the object. Compared to the grasping method, such an end effector is compact and flexible, and hence it can perform tasks in a constrained workspace; As a trade-off, it has relatively few degrees of freedom (DoFs), resulting in an under-actuation problem with complex constraints for planning and control.
 
-Inspired by recent advancements in contact-rich locomotion and manipulation, this paper proposes a novel model-based approach to control dexterous in-hand manipulation and overcome the current limitations.The proposed approach has the attractive feature, which allows the robot to robustly execute long-horizon in-hand manipulation without pre-defined contact sequences or separated planning procedures. 
+This paper proposes a new non-prehensile manipulation method for the task of object retrieval in cluttered environments, using a rod-like pusher.
 
-Specifically, we design a contact-implicit model predictive controller at high-level to generate real-time contact plans, which are executed by the low-level tracking controller. 
+Specifically, a candidate trajectory in a cluttered environment is first generated with an improved Rapidly-Exploring Random Tree (RRT) planner; Then, a Model Predictive Control (MPC) scheme is applied to stabilize the slider's poses through necessary contact with obstacles.
 
-Compared with other model-based methods, such a long-horizon feature enables replanning and robust execution of contact-rich motions to achieve large-displacement in-hand tasks more efficiently; Compared with existing learning-based methods, the proposed approach achieves the dexterity and also generalizes to different objects without any pre-training.
+Different from existing methods, the proposed approach is with the contact-aware feature, which enables the synthesized effect of active removal of obstacles, avoidance behavior, and switching contact face for improved dexterity. Hence both the feasibility and efficiency of the task are greatly promoted.
 
-Detailed simulations and ablation studies demonstrate the efficiency and effectiveness of our method. It runs at 20Hz on the 23-degree-of-freedom long-horizon in-hand object rotation task.
+The performance of the proposed method is validated in a planar object retrieval task, where the target object, surrounded by many fixed or movable obstacles, is manipulated and isolated. Both simulation and experimental results are presented.
 
 
 ## Contact
